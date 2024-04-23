@@ -58,7 +58,7 @@ spec:
       hostNetwork: false
       containers:
         - name: provider-aws-installer
-          image: ghcr.io/jackkleeman/secrets-store-csi-driver-provider-aws:c31f1e8
+          image: ghcr.io/jackkleeman/secrets-store-csi-driver-provider-aws:9ceb6b1
           imagePullPolicy: Always
           args:
               - --provider-volume=/etc/kubernetes/secrets-store-csi-providers
