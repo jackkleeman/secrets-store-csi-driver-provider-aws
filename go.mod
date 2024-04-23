@@ -1,6 +1,8 @@
 module github.com/aws/secrets-store-csi-driver-provider-aws
 
-go 1.20
+go 1.21
+
+toolchain go1.21.7
 
 require (
 	github.com/aws/aws-sdk-go v1.49.19
