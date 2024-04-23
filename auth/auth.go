@@ -175,7 +175,7 @@ func (p Auth) GetAWSSession() (awsSession *session.Session, e error) {
 		fetcher := &boundTokenFetcher{p.nameSpace, p.svcAcc, p.podName, p.podUID, p.k8sClient}
 
 		provider = endpointcreds.NewProviderClient(
-			*aws.NewConfig(), defaults.Handlers(), eksPodIdentityEndpoint,
+			*defaults.Config().WithRegion(p.region), defaults.Handlers(), eksPodIdentityEndpoint,
 			func(provider *endpointcreds.Provider) {
 				provider.ExpiryWindow = 12 * time.Hour
 				provider.AuthorizationTokenProvider = fetcher
