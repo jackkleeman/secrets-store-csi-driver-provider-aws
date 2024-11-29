@@ -88,3 +88,7 @@ spec:
             type: DirectoryOrCreate
       nodeSelector:
         kubernetes.io/os: linux
+      tolerations:
+        - key: "cloud.restate.dev/workload"
+          value: "tenant-cluster-v0"
+          effect: "NoSchedule"
