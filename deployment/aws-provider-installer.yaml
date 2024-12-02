@@ -92,3 +92,6 @@ spec:
         - key: "cloud.restate.dev/workload"
           value: "tenant-cluster-v0"
           effect: "NoSchedule"
+        - key: "cloud.restate.dev/tenant"
+          operator: "Exists"
+          effect: "NoSchedule"
